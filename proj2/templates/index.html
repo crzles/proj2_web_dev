@@ -1,14 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
-<!--[if IE 7]>
+<!-- [if IE 7]>
 <html class="ie ie7 no-js" lang="en-US">
 <![endif]-->
 <!--[if IE 8]>
 <html class="ie ie8 no-js" lang="en-US">
 <![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<!--[if !(IE 7) | !(IE 8)  ]><! -->
 <html lang="en" class="no-js">
-
-
 <head>
 	<!-- Basic need -->
 	<title>Block Buster</title>
@@ -25,14 +24,14 @@
 	<meta name="format-detection" content="telephone-no">
 
 	<!-- CSS files -->
-	<link rel="stylesheet" href="css/plugins.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 <body>
 <!--preloading-->
 <div id="preloader">
-    <img class="logo" src="images/logo1.png" alt="" width="119" height="58">
+    <img class="logo" src="{% static 'images/logo1.png' %}" alt="" width="119" height="58">
     <div id="status">
         <span></span>
         <span></span>
@@ -237,6 +236,7 @@
 			</div>
 	    	<div  class="slick-multiItemSlider">
 				<!--  DB  -->
+				  <% for i in %>
 	    		<div class="movie-item">
 	    			<div class="mv-img">
 	    				<a href="#"><img src="images/uploads/slider1.jpg" alt="" width="285" height="437"></a>
@@ -1293,10 +1293,10 @@
 </footer>
 <!-- end of footer section-->
 
-<script src="js/jquery.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/plugins2.js"></script>
-<script src="js/custom.js"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/plugins2.js'%}"></script>
+<script src="{% static 'js/custom.js'%}"></script>
 </body>
 
 
