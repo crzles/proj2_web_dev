@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7 no-js" lang="en-US">
@@ -25,8 +26,8 @@
 	<meta name="format-detection" content="telephone-no">
 
 	<!-- CSS files -->
-	<link rel="stylesheet" href="css/plugins.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 <body>
@@ -1102,10 +1103,10 @@
 </footer>
 <!-- end of footer section-->
 
-<script src="js/jquery.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/plugins2.js"></script>
-<script src="js/custom.js"></script>
+<script src="{static 'js/jquery.js'}"></script>
+<script src="{static 'js/plugins.js'}"></script>
+<script src="{static 'js/plugins2.js'}"></script>
+<script src="{static 'js/custom.js'}"></script>
 </body>
 
 <!-- moviesingle11:03-->
