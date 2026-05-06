@@ -115,3 +115,12 @@ class MovieTV(models.Model):
 
     def __str__(self):
         return self.movie_title
+
+
+
+
+class NewsletterSubscriber(models.Model):
+    email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.email

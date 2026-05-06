@@ -10,6 +10,7 @@ from .models import (
     Tweet,
     MovieTheater,
     MovieTV,
+    NewsletterSubscriber,
 )
 
 admin.site.register(Slider)
@@ -22,3 +23,4 @@ admin.site.register(News)
 admin.site.register(Tweet)
 admin.site.register(MovieTheater)
 admin.site.register(MovieTV)
+admin.site.register(NewsletterSubscriber)

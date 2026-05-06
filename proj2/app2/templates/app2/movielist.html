@@ -1,0 +1,274 @@
+{% load static %}
+
+<div class="movie-items">
+    <div class="container">
+        <div class="row ipad-width">
+
+            <div class="col-md-8">
+
+                <!-- IN THEATER -->
+                <div class="title-hd">
+                    <h2>in theater</h2>
+                    <a href="#" class="viewall">
+                        View all <i class="ion-ios-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tabs">
+                    <ul class="tab-links">
+                        <li class="active"><a href="#tab1">#Popular</a></li>
+                        <li><a href="#tab2"> #Coming soon</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+
+                        <div id="tab1" class="tab active">
+                            <div class="row">
+                                <div class="slick-multiItem">
+
+                                    {% for movie in theater_movies %}
+                                    <div class="slide-it">
+                                        <div class="movie-item">
+
+                                            <div class="mv-img">
+                                                <img src="{% static movie.img_src %}"
+                                                     alt=""
+                                                     width="{{ movie.img_width }}"
+                                                     height="{{ movie.img_height }}">
+                                            </div>
+
+                                            <div class="hvr-inner">
+                                                <a href="{{ movie.anchor_url }}">
+                                                    Read more <i class="ion-android-arrow-dropright"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="title-in">
+                                                <h6>
+                                                    <a href="{{ movie.anchor_url }}">
+                                                        {{ movie.movie_title }}
+                                                    </a>
+                                                </h6>
+
+                                                <p>
+                                                    <i class="ion-android-star"></i>
+                                                    <span>{{ movie.lower_rating }}</span>
+                                                    /{{ movie.upper_rating }}
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab2" class="tab">
+                            <div class="row">
+                                <div class="slick-multiItem">
+
+                                    {% for movie in theater_movies %}
+                                    <div class="slide-it">
+                                        <div class="movie-item">
+
+                                            <div class="mv-img">
+                                                <img src="{% static movie.img_src %}"
+                                                     alt=""
+                                                     width="{{ movie.img_width }}"
+                                                     height="{{ movie.img_height }}">
+                                            </div>
+
+                                            <div class="hvr-inner">
+                                                <a href="{{ movie.anchor_url }}">
+                                                    Read more <i class="ion-android-arrow-dropright"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="title-in">
+                                                <h6>
+                                                    <a href="{{ movie.anchor_url }}">
+                                                        {{ movie.movie_title }}
+                                                    </a>
+                                                </h6>
+
+                                                <p>
+                                                    <i class="ion-android-star"></i>
+                                                    <span>{{ movie.lower_rating }}</span>
+                                                    /{{ movie.upper_rating }}
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ON TV -->
+                <div class="title-hd">
+                    <h2>on tv</h2>
+                    <a href="#" class="viewall">
+                        View all <i class="ion-ios-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tabs">
+                    <ul class="tab-links-2">
+                        <li class="active"><a href="#tab21">#Popular</a></li>
+                        <li><a href="#tab22"> #Coming soon</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+
+                        <div id="tab21" class="tab active">
+                            <div class="row">
+                                <div class="slick-multiItem">
+
+                                    {% for movie in tv_movies %}
+                                    <div class="slide-it">
+                                        <div class="movie-item">
+
+                                            <div class="mv-img">
+                                                <img src="{% static movie.img_src %}"
+                                                     alt=""
+                                                     width="{{ movie.img_width }}"
+                                                     height="{{ movie.img_height }}">
+                                            </div>
+
+                                            <div class="hvr-inner">
+                                                <a href="{{ movie.anchor_url }}">
+                                                    Read more <i class="ion-android-arrow-dropright"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="title-in">
+                                                <h6>
+                                                    <a href="{{ movie.anchor_url }}">
+                                                        {{ movie.movie_title }}
+                                                    </a>
+                                                </h6>
+
+                                                <p>
+                                                    <i class="ion-android-star"></i>
+                                                    <span>{{ movie.lower_rating }}</span>
+                                                    /{{ movie.upper_rating }}
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab22" class="tab">
+                            <div class="row">
+                                <div class="slick-multiItem">
+
+                                    {% for movie in tv_movies %}
+                                    <div class="slide-it">
+                                        <div class="movie-item">
+
+                                            <div class="mv-img">
+                                                <img src="{% static movie.img_src %}"
+                                                     alt=""
+                                                     width="{{ movie.img_width }}"
+                                                     height="{{ movie.img_height }}">
+                                            </div>
+
+                                            <div class="hvr-inner">
+                                                <a href="{{ movie.anchor_url }}">
+                                                    Read more <i class="ion-android-arrow-dropright"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="title-in">
+                                                <h6>
+                                                    <a href="{{ movie.anchor_url }}">
+                                                        {{ movie.movie_title }}
+                                                    </a>
+                                                </h6>
+
+                                                <p>
+                                                    <i class="ion-android-star"></i>
+                                                    <span>{{ movie.lower_rating }}</span>
+                                                    /{{ movie.upper_rating }}
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-md-4">
+                <div class="sidebar">
+
+                    <!-- ADS -->
+                    {% for ad in sidebar_ads %}
+                    <div class="ads">
+                        <img src="{% static ad.img_src %}"
+                             alt=""
+                             width="{{ ad.img_width }}"
+                             height="{{ ad.img_height }}">
+                    </div>
+                    {% endfor %}
+
+                    <!-- CELEBRITIES -->
+                    <div class="celebrities">
+                        <h4 class="sb-title">Spotlight Celebrities</h4>
+
+                        {% for celeb in celebrities %}
+                        <div class="celeb-item">
+
+                            <a href="{{ celeb.anchor_url }}">
+                                <img src="{% static celeb.celebrity_url %}"
+                                     alt=""
+                                     width="{{ celeb.img_width }}"
+                                     height="{{ celeb.img_height }}">
+                            </a>
+
+                            <div class="celeb-author">
+                                <h6>
+                                    <a href="{{ celeb.anchor_url }}">
+                                        {{ celeb.celebrity_name }}
+                                    </a>
+                                </h6>
+
+                                <span>{{ celeb.celebrity_type }}</span>
+                            </div>
+
+                        </div>
+                        {% endfor %}
+
+                        <a href="#" class="btn">
+                            See all celebrities
+                            <i class="ion-ios-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

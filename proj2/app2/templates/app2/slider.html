@@ -1,0 +1,74 @@
+{% load static %}
+
+<div class="slider movie-items">
+    <div class="container">
+        <div class="row">
+
+            <!-- SOCIAL LINKS -->
+            <div class="social-link">
+                <p>Follow us:</p>
+
+                {% for link in social_links %}
+                    <a class="{{ link.anchor_class }}"
+                       href="{{ link.url }}">
+
+                        <i class="{{ link.icon_class }}"></i>
+
+                    </a>
+                {% endfor %}
+            </div>
+
+            <!-- MAIN SLIDER -->
+            <div class="slick-multiItemSlider">
+
+                {% for movie in sliders %}
+
+                <div class="movie-item">
+
+                    <div class="mv-img">
+
+                        <a href="{{ movie.anchor_url }}">
+
+                            <img src="{% static movie.image_src %}"
+                                 alt=""
+                                 width="{{ movie.image_width }}"
+                                 height="{{ movie.image_height }}">
+
+                        </a>
+
+                    </div>
+
+                    <div class="title-in">
+
+                        <div class="cate">
+                            <span class="{{ movie.movie_genre }}">
+                                <a href="#">
+                                    {{ movie.movie_genre }}
+                                </a>
+                            </span>
+                        </div>
+
+                        <h6>
+                            <a href="{{ movie.anchor_url }}">
+                                {{ movie.movie_title }}
+                            </a>
+                        </h6>
+
+                        <p>
+                            <i class="ion-android-star"></i>
+
+                            <span>{{ movie.lower_rating }}</span>
+                            /{{ movie.upper_rating }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+</div>
