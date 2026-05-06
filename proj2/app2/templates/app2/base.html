@@ -23,6 +23,21 @@
     <!-- CSS files -->
     <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+    .item5 form button.btn {
+        background: #dd003f;
+        border: none;
+        color: white;
+        padding: 11px 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+
+    .item5 form button.btn:hover {
+        background: #b80032;
+    }
+</style>
 </head>
 
 <body>
@@ -48,7 +63,8 @@
 
         <h3>Login</h3>
 
-        <form method="post" action="#">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
 
             <div class="row">
                 <label for="username">
@@ -119,7 +135,9 @@
 
         <h3>sign up</h3>
 
-        <form method="post" action="#">
+        <form method="post" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <!-- This is new for sign up -->
 
             <div class="row">
                 <label for="username-2">
@@ -385,16 +403,28 @@
                     to get latest news from us.
                 </p>
 
-                <form action="#">
-                    <input type="text"
-                           placeholder="Enter your email...">
-                </form>
 
-                <a href="#" class="btn">
-                    Subscribe now
-                    <i class="ion-ios-arrow-forward"></i>
-                </a>
+                <!-- NEW -->
+<form action="{% url 'newsletter' %}" method="POST">
 
+    {% csrf_token %}
+
+    <input type="email"
+           name="email"
+           placeholder="Enter your email..."
+           required>
+
+    <a href="#"
+       class="btn"
+       onclick="this.closest('form').submit(); return false;">
+
+        Subscribe now
+        <i class="ion-ios-arrow-forward"></i>
+
+    </a>
+
+</form>
+                 <!-- NEW -->
             </div>
 
         </div>
